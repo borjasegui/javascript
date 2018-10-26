@@ -1,0 +1,15 @@
+body{
+    padding: 0 20 px;
+    margin: 0;
+
+}
+div img{
+    display: inline-block;
+    text-align: center;
+    width: 50%;
+}
+div button{
+    background: red;
+    width: 50%;
+    text-align: center;
+}

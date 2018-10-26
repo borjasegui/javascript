@@ -21,21 +21,21 @@ else {
 }
 // tengo 3 numeros, muestre el mayor de los numeros
 
-var num1 = 30;
+var num1 = 120;
 
-var num2 = 340;
-var num3 = 450;
+var num2 = 3000;
+var num3 = 4500;
 
 //arreglalo borja!
 if (num1 >= num2) {
     if (num1 >= num3) {
         console.log('numero mayor es :', num1);
-    } else {num3 >= num2
+    } else {
         console.log('numero mayor es :', num3);
     }
 }
- else {num2 >= num3
-      console.log('numero mayor es :', num2);
+else {
+    console.log('numero mayor es :', num2);
 }
 
 //loops
@@ -111,10 +111,27 @@ console.log(generaroperacion(4, 8, '/'))
 console.log(generaroperacion(4, 0, '/'))
 
 
+console.log("ARRAYS");
+
 
 function numarra(arrai, op) {
-    
-    for (let index = 0; index <= arrai.length; index++)
-    return ;
-}
-console.log(numarra([1, 2, 3], '+'))
+    let resultado;
+
+    if (op == '+') {
+        resultado = 0;
+        for (let index = 0; index < arrai.length; index++) {
+            resultado =resultado + arrai[index];
+        }
+    }
+    else if(op=='*'){
+        resultado=1;
+        for (let index = 0; index < arr.length; index++) {
+            resultado = resultado *arr[index];
+        }
+    }
+    return resultado;
+    }
+console.log(numarra([1, 2, 3, 4], '+'))
+console.log(numarra([1, 2, 3, 4], '*'))
+console.log(numarra([1, 2, 3, 4], '/'))
+console.log(numarra([10, 2, 3, 4], '-'))

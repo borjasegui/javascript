@@ -1,0 +1,20 @@
+body{
+    padding: 0;
+    margin:0;
+}
+.normal{
+    
+    background: red;
+    width:  50px;
+    height: 100px;
+    display: inline-block;
+   
+}
+.semi {
+    position: absolute;
+    background: black;
+    width:  50px;
+    height: 60px;
+    display: inline-block;
+    margin-left: -25px;
+}

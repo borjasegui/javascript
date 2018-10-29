@@ -126,7 +126,7 @@ function numarra(arrai, op) {
     else if(op=='*'){
         resultado=1;
         for (let index = 0; index < arr.length; index++) {
-            resultado = resultado *arr[index];
+            resultado = resultado * arrai[index];
         }
     }
     return resultado;

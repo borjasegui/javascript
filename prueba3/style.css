@@ -1,0 +1,28 @@
+body{
+    padding: 0;
+    margin: 0;
+    
+}
+ul > li{
+    list-style: none;
+    vertical-align: top;
+    border-bottom: 2px solid gold;
+    padding: 10px;
+    
+}
+ul >li img {
+    width :80px}
+
+ul >li>*{
+    display: inline-block;
+}
+.saluda{
+    background: orangered;
+    color: azure;
+    padding: 10px;
+}
+.borra{
+    background: red;
+    color: white;
+    padding : 5px;
+}

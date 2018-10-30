@@ -1,17 +1,40 @@
 let notas = [
-   { nombrenota : 'do', tono : './wav/a1.wav', tono:true},
-   { nombrenota : 'dos', tono : , tono:false},
-   { nombrenota : 're', tono : , tono:true},
-   { nombrenota : 'res', tono : , tono:false},
-   { nombrenota : 'mi', tono : , tono:true},
-
-   { nombrenota : 'fa', tono : , tono:true},
-   { nombrenota : 'fas', tono : , tono:false},
-   { nombrenota : 'sol', tono : , tono:true},
-   { nombrenota : 'sols', tono : , tono:false},
-   { nombrenota : 'la', tono : , tono:true},
-
-   { nombrenota : 'las', tono : , tono:false},
-   { nombrenota : 'si', tono : , tono:true},
+    { nombre: 'do', sonido: './wav/c1.wav', tono: true },
+    { nombre: 'dos', sonido: './wav/c1s.wav', tono: false },
+    { nombre: 're', sonido: './wav/d1.wav', tono: true },
+    { nombre: 'res', sonido: './wav/d1s.wav', tono: false },
+    { nombre: 'mi', sonido: './wav/e1.wav', tono: true },
+    { nombre: 'fa', sonido: './wav/f1.wav', tono: true },
+    { nombre: 'fas', sonido: './wav/f1s.wav', tono: false },
+    { nombre: 'sol', sonido: './wav/g1.wav', tono: true },
+    { nombre: 'sols', sonido: './wav/g1s.wav', tono: false },
+    { nombre: 'la', sonido: './wav/a1.wav', tono: true },
+    { nombre: 'las', sonido: './wav/a1s.wav', tono: false },
+    { nombre: 'si', sonido: './wav/b1.wav', tono: true },
  ];
- function
+ 
+ function generateStructure(arrNotes, divN) {
+    let finalHtml = '';
+ 
+    arrNotes.forEach(element => {
+        finalHtml += element.tono ? `<div class="note" data-snd="${element.sonido}"></div>`
+         : `<div class="note semi" data-snd="${element.sonido}"></div>`;
+    });
+ 
+    document.getElementById(divN).innerHTML = finalHtml;
+    associateAndPlayNotes();
+ }
+ 
+ function associateAndPlayNotes() {
+    let player = document.getElementById('player');
+ 
+    document.querySelectorAll('.note').forEach(element => {
+        element.onclick = function () {
+            player.src = this.getAttribute('data-snd');
+            player.play();
+        }
+    });
+ 
+ }
+ 
+ generateStructure(notas, 'piano');

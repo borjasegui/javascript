@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>regístrate</h1>
+
+    <form method="POST" action="recepcionformulario.html">
+       <div>
+            <div>
+                <h2>Nombre</h2>
+                 <label for="nombre">Nombre :</label>
+                 <input type="text" name="nombre" id="nombre" placeholder="introduce tu nombre" 
+                 required minlength="3" maxlength="20" pattern="[a-zA-Z ]*"> 
+            </div>
+            <div>
+                <h2>Email</h2>
+                <label for="email">Email :</label>
+                <input type="email" name="email" id="email" placeholder="introduce email" required> 
+            </div>
+            <div>
+                <h2>Edad</h2>
+                <label for="edad">Edad :</label>
+                <input type="number" name="number" id="edad" placeholder="introduce tu edad" min="14" max="78"> 
+            </div>
+            <div>
+                    <h2>sexo</h2>
+                    <div>
+                        <input type="radio" name="sexo" id="M" value="1">
+                        <label for="M">M</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="sexo" id="F" value="2">
+                        <label for="F">F</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="sexo" id="O" value="0">
+                        <label for="Other">Other</label>
+                    </div>
+                    
+                    
+                </div>
+                <div>
+                    <h2>Colores Favoritos</h2>
+                    <div>
+                        <input type="checkbox" name="color" id="rojo" value="0"> 
+                        <label for="rojo">rojo</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="color" id="azul" value="1"> 
+                        <label for="azul">azul</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="color" id="verde" value="1"> 
+                        <label for="verde">verde</label>
+                    </div>
+                </div>
+                <div>
+                    <label for="pais">pais</label>
+                    <select name="pais" id="pais"required>
+                        <option value="0" disabled selected>Elegir pais</option>
+                        <option value="123">Noruega</option>
+                        <option value="124">España</option>
+                        <option value="125">Irlanda</option>
+                        <option value="126">Francia</option>
+                    </select>
+                    
+                </div>
+                <div>
+                    
+                    <label for="cuentame" class="aloancho">Algo sobre ti:</label>
+                    <textarea
+                     name="cuentame" id="cuentame" maxlength="200"
+                     placeholder="tu puta madre">
+                    </textarea>
+
+                </div>
+            <div>
+                <button>registrate</button>
+            </div>
+        </div>
+
+    </form>
+    
+</body>
+</html>

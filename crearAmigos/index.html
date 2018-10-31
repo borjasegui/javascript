@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
@@ -7,12 +8,32 @@
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-    <h1>crear amigos</h1>
-    <ul id="amigos">
 
-    </ul>
+<body>
+    <h1>instagram</h1>
+    <ul id='amigosinsta'></ul>
+    <h1>facebook</h1>
+    <ul id='amigosface'></ul>
+
+    <button id='cargarbtnface'>Cargar face</button>
+    <button id='cargarbtninsta'>Cargar insta</button>
+
+    <div id='mensaje' class='error esconder'>usuario y email no validos</div>
+
+    <form id='loginform' action="" method="POST" novalidate>
+        <div>
+            <input type="text" placeholder=" username" minlength="3" id='username' required>
+            <div id='incorrectouser' class='error esconder'>Completa el Username en el formato correcto</div>
+        </div>
+        <div><input type="email" name="email" id="addemail" placeholder="introduce email" required></div>
+        <div id='incorrectopass' class='error esconder'>Completa el email en el formato correcto</div>
+        <div><button id='accebtn'>añadir</button>
+        </div>
+    </form>
+
 
 </body>
+<script src="./jquery-3.3.1.min.js"></script>
 <script src="./dom.js"></script>
+
 </html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>formulario</h1>
+    <section>
+        <div id='mensaje' class='error esconder'>usuario y contraseña no validos</div>
+
+        <form id='loginform' action="" method="POST" novalidate>
+            <div>
+                <input type="text" placeholder=" username" minlength="3" id='username'required>
+                <div id='incorrectouser' class='error esconder'>Completa el User name en el formato correcto</div>
+            </div>
+            <div><input type="password" placeholder='password' pattern="[a-zA-Z0-9]*" id='password'required></div>
+            <div id='incorrectopass' class='error esconder'>Completa el password en el formato correcto</div>
+            <div><button id='accebtn'>Acceder</button>
+            </div>
+        </form>
+    </section>
+
+</body>
+<script src="./jquery-3.3.1.min.js"></script>
+<script src="./javascript.js"></script>
+
+</html>

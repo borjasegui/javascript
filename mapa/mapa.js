@@ -1,4 +1,11 @@
-
+let bares = [
+  { nombre: 'alamo', latitud: 40.4619445, longitud: -3.6741318, descripcion:'<div id="bar"><h5>Bar El Alamo</h5></div><div id="texto"><h6>Chupitos Gratis de 00:00 a 00:30 los martes <a href="./barejemplo.html" class="info">mas info</a> </h6></div>' },
+  { nombre: 'fresxo', latitud: 40.4634891, longitud: -3.6752189, descripcion:'<div id="bar"><h5>Bar El Fresxo </h5></div><div id="texto"><h6>Con el Fresco ven al Fresxo y tienes un 3x2 en Birra. <a href="./barejemplo.1.html" class="info">mas info</a> </h6></div>' },
+  { nombre: 'blanco', latitud: 40.4637448, longitud: -3.6764269, descripcion: '<div id="bar"><h5>Cerveceria Blanco y Azul</h5></div><div id="texto"><h6>Si vienes de blanco y azul, únicamente, chupito gratis <a href="./barejemplo.2.html" class="info">mas info</a> </h6></div>'},
+  { nombre: 'cocodrila', latitud:  40.462959, longitud: -3.6780409, descripcion: '<div id="bar"><h5>Taberna La Cocodrila</h5></div><div id="texto"><h6>Todos los miercoles cerveza artesana nueva <a href="./barejemplo.3.html" class="info">mas info</a> </h6></div>'},
+  { nombre: 'copas', latitud: 40.461812, longitud: -3.6767821, descripcion: '<div id="bar"><h5>Pop Copas y Tapas</h5></div><div id="texto"><h6>Ven 5 dias en tres semanas y te regalamos la tapa del mes con tu birra <a href="./barejemplo.4.html" class="info">mas info</a> </h6></div>'},
+  
+];
 
 
 function initMap() {
@@ -9,6 +16,18 @@ function initMap() {
 
 
 //
+function meterbares(losbares){
+  losbares.foreach() 
+  new google.maps.Marker({
+    position: {latitud, longitud},
+     map: map,
+     icon: './imgs/cerveza.png',
+     info: new google.maps.InfoWindow({
+       content: descripcion
+      }),
+   });
+
+}
   let alamo =new google.maps.Marker({
    position: { lat: 40.4619445, lng: -3.6741318 },
     map: map,
